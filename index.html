@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        canvas {
+            border: 1px solid #ccc; /* Estilo da borda do canvas */
+            /* Outros estilos para o canvas */
+        }
+    </style>
+    <title>Canvas Exemplo</title>
+</head>
+<body>
+    <canvas id="meuCanvas" width="400" height="200"></canvas>
+    <!-- Outro conteúdo da página -->
+    <script>
+        const canvas = document.getElementById('meuCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Aqui você pode desenhar no canvas usando JavaScript
+        ctx.fillRect(10, 10, 100, 50);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* Estilos gerais */
+body {
+    background-image: url("image.jpg");
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos do cabeçalho */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Estilos do rodapé */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos da tela (será adicionado no próximo projeto) */
+/* .tela { ... } */
