@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        canvas {
-            border: 1px solid #ccc; /* Estilo da borda do canvas */
-            /* Outros estilos para o canvas */
-        }
-    </style>
-    <title>Canvas Exemplo</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Minha Página Web</title>
 </head>
 <body>
-    <canvas id="meuCanvas" width="400" height="200"></canvas>
-    <!-- Outro conteúdo da página -->
-    <script>
-        const canvas = document.getElementById('meuCanvas');
-        const ctx = canvas.getContext('2d');
-
-        // Aqui você pode desenhar no canvas usando JavaScript
-        ctx.fillRect(10, 10, 100, 50);
-    </script>
+    <div class="container">
+        <h1 class="display-4">Título da Página</h1>
+        <p>Nota sobre como usar este site.</p>
+        <span id="tamanho-fonte"></span>
+    </div>
+    <footer class="bg-dark text-light py-3">
+        © 2024 Seus Direitos Reservados
+    </footer>
+    <canvas id="minha-tela"></canvas>
+    <script src="main.js"></script>
 </body>
 </html>

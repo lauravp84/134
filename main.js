@@ -1,48 +1,28 @@
-// Importe a biblioteca p5.js
-import * as p5 from 'p5';
+// Acesse a webcam
+let captura;
 
-// Variáveis globais
-let video;
-let poseNet;
-let poses = [];
-
-// Função para inicializar a webcam e o PoseNet
 function setup() {
-  createCanvas(640, 480); // Defina o tamanho da tela
-
-  // Acesse a webcam
-  video = createCapture(VIDEO);
-  video.size(width, height);
-
-  // Inicialize o PoseNet
-  poseNet = ml5.poseNet(video, modelLoaded);
-  poseNet.on('pose', gotPoses);
-
-  // Oculte o componente extra criado por p5.js
-  video.hide();
+    createCanvas(640, 480); // Defina o tamanho da visualização da webcam
+    captura = createCapture(VIDEO); // Acesse a webcam
+    captura.size(640, 480); // Defina o tamanho da visualização da webcam
+    captura.hide(); // Não oculte a visualização da webcam
 }
 
-// Função chamada quando o modelo PoseNet é carregado
+// Inicialize o PoseNet
+let poseNet;
+
 function modelLoaded() {
-  console.log('Modelo PoseNet carregado!');
+    console.log('Modelo PoseNet carregado!');
 }
 
-// Função chamada quando as poses são detectadas
-function gotPoses(results) {
-  poses = results;
+function setup() {
+    poseNet = ml5.poseNet(captura, modelLoaded); // Inicialize o PoseNet
+    poseNet.on('pose', gotposes); // Execute o PoseNet e chame gotposes() quando houver detecção de pose
 }
 
-// Função de desenho contínua
-function draw() {
-  // Exiba a visualização da webcam
-  image(video, 0, 0, width, height);
-
-  // Adicione o código para criar a tela e posicione-a ao lado da visualização da webcam
-  // (implemente conforme necessário)
-
-  // Adicione o código para executar o PoseNet
-  // (implemente conforme necessário)
-
-  // Escreva a função gotposes()
-  // (implemente conforme necessário)
+// Função para lidar com os resultados do PoseNet
+function gotposes(resultados) {
+    if (resultados.length > 0) {
+        console.log(resultados); // Exiba os resultados no console
+    }
 }
