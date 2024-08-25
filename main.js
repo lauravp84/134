@@ -37,7 +37,7 @@ function gotPoses(resultados) {
 
         // Exiba seu nome na tela
         fill(255); // Cor do texto (branco)
-        text('Seu Nome', 10, 100); // Coordenadas x e y
+        text('Bianca', 10, 100); // Coordenadas x e y
     }
 }
 
