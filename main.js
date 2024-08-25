@@ -32,9 +32,12 @@ function gotPoses(resultados) {
         // Atualize o tamanho do texto
         textSize(tamanhoTexto);
 
+        // Defina a cor de fundo da tela
+        background('#f0f0f0'); // Substitua pela cor desejada (HEX ou nome)
+
         // Exiba seu nome na tela
         fill(255); // Cor do texto (branco)
-        text('Bianca', 10, 100); // Coordenadas x e y
+        text('Seu Nome', 10, 100); // Coordenadas x e y
     }
 }
 
